@@ -37,7 +37,7 @@ with open(csvpath) as budget_file:
 
     average_change = round((sum(profit_losses) / len(profit_losses)), 2)
 
-print(
+output = print(
     f"Financial Analysis\n"
     f"------------------------------------------\n"
     f"Total Months: {month_total}\n"
@@ -46,3 +46,19 @@ print(
     f"Greatest Increase in Profits: {max_day} (${max_profit})\n"
     f"Greatest Decrease in Profits: {min_day} (${min_profit})\n"
 )
+
+output
+
+output_file = os.path.join('..', 'PyBank', 'analysis', 'budget_data_results.txt')
+
+final_file = open(output_file, "w+")
+final_file.writelines(
+    f"Financial Analysis\n"
+    f"------------------------------------------\n"
+    f"Total Months: {month_total}\n"
+    f"Total: ${net_total}\n"
+    f"Average Change: ${average_change}\n"
+    f"Greatest Increase in Profits: {max_day} (${max_profit})\n"
+    f"Greatest Decrease in Profits: {min_day} (${min_profit})\n"
+    )
+final_file.close()
