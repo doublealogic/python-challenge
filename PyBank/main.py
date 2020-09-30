@@ -9,6 +9,10 @@ month_total = 0
 net_total = 0
 profit_change = 0
 prev_profit = 0
+max_profit = 0
+min_profit = 0
+max_day = " "
+min_day = " "
 
 with open(csvpath) as budget_file:
     csv_reader = csv.reader(budget_file, delimiter = ',')
@@ -22,6 +26,12 @@ with open(csvpath) as budget_file:
             profit_change = int(row[1]) - prev_profit
             profit_losses.append(profit_change)
             prev_profit = int(row[1])
+            if profit_change > max_profit:
+                max_profit = profit_change
+                max_day = str(row[0])
+            elif profit_change < min_profit:
+                min_profit = profit_change
+                min_day = str(row[0])
         else: 
             prev_profit = int(row[1])
 
@@ -33,4 +43,6 @@ print(
     f"Total Months: {month_total}\n"
     f"Total: ${net_total}\n"
     f"Average Change: ${average_change}\n"
+    f"Greatest Increase in Profits: {max_day} (${max_profit})\n"
+    f"Greatest Decrease in Profits: {min_day} (${min_profit})\n"
 )
