@@ -24,17 +24,37 @@ This repository contains a multi-project task where I was asked to create **two*
 
 * My task was to create a Python script that analyzed the records to calculate each of the following:
 
-  * The total number of months included in the dataset
+  * The total number of months included in the dataset.
 
-  * The net total amount of "Profit/Losses" over the entire period
+  * The net total amount of "Profit/Losses" over the entire period.
 
-  * The average of the changes in "Profit/Losses" over the entire period
+  * The average of the changes in "Profit/Losses" over the entire period.
 
-  * The greatest increase in profits (date and amount) over the entire period
+  * The greatest increase in profits (date and amount) over the entire period.
 
-  * The greatest decrease in losses (date and amount) over the entire period
+  * The greatest decrease in losses (date and amount) over the entire period.
 
 * Over the 86 month period, it was interesting to note that their average changes in profit skewed negative, with their biggest loss in September of 2013.
 
 * My final script both prints the analysis to the terminal and exports a text file to the `analysis` folder with the results.
 
+## PyPoll
+
+
+* In this part of the project, I was tasked with helping a small, rural town modernize its vote counting process. I was given a poll dataset called [election_data.csv](PyPoll/Resources/election_data.csv). This dataset had three columns: `Voter ID`, `County`, and `Candidate`. 
+
+* My task was to create a Python script that analyzed all of the votes and calculated each of the following:
+
+  * The total number of votes cast.
+
+  * A complete list of candidates who received votes.
+
+  * The percentage of votes each candidate won.
+
+  * The total number of votes each candidate won.
+
+  * The winner of the election based on popular vote.
+
+* Through this script, we were able to discover that this town's vote was decisively in favor of Khan.
+
+* My final script both prints the analysis to the terminal and exports a text file to the `analysis` folder with the results.
