@@ -51,6 +51,7 @@ print(
     f"Greatest Decrease in Profits: {min_day} (${min_profit})\n"
 )
 
+#Exported txt file
 output_file = os.path.join('..', 'PyBank', 'analysis', 'budget_data_results.txt')
 
 final_file = open(output_file, "w+")
