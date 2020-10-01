@@ -1,6 +1,8 @@
+#Imported dependencies
 import os
 import csv
 
+#Established variables
 profit_losses = []
 
 csvpath = os.path.join('..', 'PyBank', 'Resources', 'budget_data.csv')
@@ -14,6 +16,7 @@ min_profit = 0
 max_day = " "
 min_day = " "
 
+#Calculate Total Months, Total Profit/Losses, Average of the changes, and greatest increase/decrease in profits
 with open(csvpath) as budget_file:
     csv_reader = csv.reader(budget_file, delimiter = ',')
     
@@ -37,6 +40,7 @@ with open(csvpath) as budget_file:
 
     average_change = round((sum(profit_losses) / len(profit_losses)), 2)
 
+#Printed Finacial Analysis results
 print(
     f"Financial Analysis\n"
     f"------------------------------------------\n"
