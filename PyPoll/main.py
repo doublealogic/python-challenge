@@ -28,7 +28,7 @@ print(
 )
 
 for candidate,total_can_votes in candidates.items():
-    vote_percentage = (round((total_can_votes/vote_total), 3) * 100)
+    vote_percentage = ('{:.3f}'.format((total_can_votes/vote_total) * 100))
     if total_can_votes >= winning_votes:
         winning_votes = total_can_votes
         winner = candidate
