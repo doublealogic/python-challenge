@@ -34,9 +34,11 @@ for candidate,total_can_votes in candidates.items():
         winner = candidate
     print(
         f'{candidate}: {vote_percentage}% ({total_can_votes})'
+        
     )
 
 print(
+    f'-----------------------------------\n'
     f'Winner: {winner}\n'
     f'-----------------------------------'
 )
